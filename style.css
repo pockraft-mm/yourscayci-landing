@@ -135,3 +135,7 @@
 .detail-size-guide .size-heading { margin-bottom: 28px; }
 .detail-empty { min-height: 40vh; padding-top: 90px; }
 @media (max-width: 720px) { .product-detail { padding: 28px 0 70px; }.detail-grid { grid-template-columns: 1fr; gap: 30px; }.detail-image, .detail-image > img { min-height: 440px; height: 440px; }.detail-copy h1 { font-size: 43px; }.detail-size-guide { margin-top: 54px; padding: 24px 18px; }.detail-size-guide .size-heading { display: grid; gap: 16px; } }
+
+.fit-recommendations { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.fit-recommendations a { padding: 8px 10px; border: 1px solid #dacde5; background: #faf7fc; color: var(--plum); }
+.fit-recommendations a:hover { border-color: #9d82b1; background: #f0e8f5; }
