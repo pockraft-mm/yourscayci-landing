@@ -6,9 +6,8 @@ export const pockraftLandingPage = createLandingPage({
     category: 'Commercial landing page factory',
     logoSrc: '/pockraft-logo.png',
     copyrightYear: '2026',
-    metaTitle: 'Pockraft - React Landing Page Template',
-    metaDescription:
-      'Pockraft is a polished, reusable React landing page template for presenting and launching products.',
+    metaTitle: 'Yours CayCi | Stocking and Fashion Collections',
+    metaDescription: 'Yours CayCi | Stocking and Fashion Collections',
   },
   navigation: [
     { label: 'About', href: '/#about' },
