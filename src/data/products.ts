@@ -7,7 +7,7 @@ export type Product = {
 
 export const products: Product[] = [
   {
-    name: 'Skin Tone',
+    name: 'Skin Color',
     tone: 'Skin',
     description: 'Soft sheer beige',
     images: ['product-stocking-skincolor-1.png', 'product-stocking-skincolor-2.png', 'product-stocking-skincolor-3.png'],

@@ -1,22 +1,15 @@
 import { useState } from 'react';
 import { ArrowRight, Check, Copy, MessageCircle, Phone, QrCode, Share2, Sparkles, Star, X } from 'lucide-react';
 import { products, type Product } from '../data/products';
+import { sizeGuide } from '../data/sizing';
 import { RouteLink } from '../components/RouteLink';
 
 const asset = (name: string) => `/data/${name}`;
 
-const sizes = [
-  ['S', '140–156 cm', '35–50 kg', "4'59\"–5'1\"", '77–110 lbs'],
-  ['M', '149–161 cm', '38–56 kg', "4'9\"–5'3\"", '85–125 lbs'],
-  ['L', '155–170 cm', '40–61 kg', "4'10\"–5'6\"", '90–135 lbs'],
-  ['XL', '164–182 cm', '58–79 kg', "5'4\"–6'0\"", '130–175 lbs'],
-  ['2XL', '170–182 cm', '77–102 kg', "5'6\"–6'0\"", '170–225 lbs'],
-];
-
 function qrUrl(value: string) { return `https://api.qrserver.com/v1/create-qr-code/?size=220x220&margin=12&data=${encodeURIComponent(value)}`; }
 
 function findSize(height: number, weight: number) {
-  const match = sizes.find(([, h, w]) => {
+  const match = sizeGuide.find(([, h, w]) => {
     const [h1, h2] = h.match(/\d+/g)!.map(Number);
     const [w1, w2] = w.match(/\d+/g)!.map(Number);
     return height >= h1 && height <= h2 && weight >= w1 && weight <= w2;
@@ -76,7 +69,7 @@ export function LandingPage() {
 
     <section className="fit-section section-border" id="pair"><div className="container pair-grid"><div><span className="eyebrow lavender-eyebrow">Find My Fit</span><h2>Made for <em>you.</em></h2><p>A little help for your perfect pair.</p></div><div className="pair-form"><div className="unit-toggle"><button className={units === 'metric' ? 'active' : ''} onClick={() => setUnits('metric')}>cm · kg</button><button className={units === 'imperial' ? 'active' : ''} onClick={() => setUnits('imperial')}>ft · in · lbs</button></div><label>Height <output>{heightLabel}</output><input type="range" min={units === 'metric' ? 140 : 55} max={units === 'metric' ? 182 : 72} value={units === 'metric' ? height : heightInches} onChange={(e) => { setHeight(units === 'metric' ? Number(e.target.value) : Math.round(Number(e.target.value) * 2.54)); setShowResult(false); }} /></label><label>Weight <output>{weightLabel}</output><input type="range" min={units === 'metric' ? 35 : 77} max={units === 'metric' ? 102 : 225} value={units === 'metric' ? weight : Math.round(weight * 2.20462)} onChange={(e) => { setWeight(units === 'metric' ? Number(e.target.value) : Math.round(Number(e.target.value) / 2.20462)); setShowResult(false); }} /></label><div className="tone-picks"><span>What is the occasion?</span><small>Tell us where you’re going. We’ll pick the color.</small><div>{['Everyday', 'Work', 'Night out'].map((choice) => <button className={occasion === choice ? 'tone-choice selected' : 'tone-choice'} onClick={() => { setOccasion(choice); setShowResult(false); }} key={choice}>{choice}</button>)}</div></div><button className="button button-dark" onClick={() => setShowResult(true)}>Find My Fit <ArrowRight size={16} /></button>{showResult && <div className="pair-result"><span><Check size={15} /> Your match</span><strong>{size} · {recommended.name}</strong><a href={`#product-${recommended.tone.toLowerCase()}`}>See your color <ArrowRight size={14} /></a></div>}</div></div>
 
-    <div className="container size-guide-panel" id="size-guide"><div className="size-heading"><div><span className="eyebrow lavender-eyebrow">Size guide</span><h2>A good <em>fit.</em></h2></div><p>Use height and weight together.</p></div><div className="size-table-wrap"><table><thead><tr><th>Size</th><th>Height</th><th>Weight</th></tr></thead><tbody>{sizes.map(([label, cm, kg, feet, lbs]) => <tr key={label}><td>{label}</td><td>{units === 'metric' ? cm : feet}</td><td>{units === 'metric' ? kg : lbs}</td></tr>)}</tbody></table></div><div className="wear-notes"><span>1. Smooth nails.</span><span>2. Roll from toe.</span><span>3. Adjust heel.</span><span>4. Pull up gently.</span></div></div></section>
+    </section>
 
     <section className="feedback section-border" id="feedback"><div className="container"><div className="section-heading split-heading"><div><span className="eyebrow lavender-eyebrow">Customer notes</span><h2>Lovely Customers’ <em>feedbacks.</em></h2></div><div className="rating"><Star size={14} fill="currentColor" /> 5.0 <span>from our girls</span></div></div><div className="chat-grid">{['customer-review-1.png', 'customer-review-2.png', 'customer-review-3.png', 'customer-review-4.png', 'customer-review-5.png'].map((image, index) => <ReviewCard image={image} name={['May', 'Customer', 'Corn', 'Customer', 'Linn'][index]} quote={['“So soft. So pretty.”', '“Received with love.”', '“The fit is beautiful.”', '“A must-have.”', '“I really love it.”'][index]} key={image} />)}</div></div></section>
 

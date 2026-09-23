@@ -131,5 +131,7 @@
 .detail-prices button { min-height: 90px; display: grid; align-content: center; gap: 6px; padding: 14px; border: 1px solid #ddd3e4; background: white; text-align: left; cursor: pointer; }
 .detail-prices button.selected, .detail-prices button:hover { border-color: #8c6aa5; background: #f3edf7; }
 .detail-prices small { color: var(--muted); font-size: 10px; }.detail-prices b { font-size: 14px; letter-spacing: .1em; }.detail-prices strong { color: var(--plum); font-size: 12px; }
+.detail-size-guide { margin-top: 88px; padding: 42px; background: white; border: 1px solid #e9e1ed; }
+.detail-size-guide .size-heading { margin-bottom: 28px; }
 .detail-empty { min-height: 40vh; padding-top: 90px; }
-@media (max-width: 720px) { .product-detail { padding: 28px 0 70px; }.detail-grid { grid-template-columns: 1fr; gap: 30px; }.detail-image, .detail-image > img { min-height: 440px; height: 440px; }.detail-copy h1 { font-size: 43px; } }
+@media (max-width: 720px) { .product-detail { padding: 28px 0 70px; }.detail-grid { grid-template-columns: 1fr; gap: 30px; }.detail-image, .detail-image > img { min-height: 440px; height: 440px; }.detail-copy h1 { font-size: 43px; }.detail-size-guide { margin-top: 54px; padding: 24px 18px; }.detail-size-guide .size-heading { display: grid; gap: 16px; } }
