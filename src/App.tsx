@@ -26,6 +26,12 @@ export default function App({ config }: { config: LandingPageConfig }) {
     return () => window.removeEventListener('popstate', handleRouteChange);
   }, []);
 
+  useEffect(() => {
+    document.title = config.brand.metaTitle;
+    const description = document.querySelector('meta[name="description"]');
+    description?.setAttribute('content', config.brand.metaDescription);
+  }, [config]);
+
   const productMatch = pathname.match(/^\/product\/([^/]+)\/?$/);
   const page = productMatch ? <ProductDetailPage slug={productMatch[1]} /> : pathname === '/demo' ? <DemoPage /> : <LandingPage />;
 

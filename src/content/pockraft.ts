@@ -2,9 +2,9 @@ import { createLandingPage } from '../factories/createLandingPage';
 
 export const pockraftLandingPage = createLandingPage({
   brand: {
-    name: 'Pockraft',
-    category: 'Commercial landing page factory',
-    logoSrc: '/pockraft-logo.png',
+    name: 'Yours CayCi',
+    category: 'Stocking and Fashion Collections',
+    logoSrc: '/data/logo-yourscayci.jpg',
     copyrightYear: '2026',
     metaTitle: 'Yours CayCi | Stocking and Fashion Collections',
     metaDescription: 'Yours CayCi | Stocking and Fashion Collections',
@@ -15,10 +15,9 @@ export const pockraftLandingPage = createLandingPage({
     { label: 'Pricing', href: '/#pricing' },
   ],
   hero: {
-    eyebrow: 'Pockraft - commercial landing page template',
-    title: 'A clear promise that makes your project easy to understand.',
-    description:
-      'Use one or two sentences to explain who this project is for, what problem it solves, and why the solution is worth trying.',
+    eyebrow: 'Yours CayCi Stocking',
+    title: 'Be you. Be elegant.',
+    description: 'Stocking and fashion collections for every day.',
     primaryAction: { label: 'Try the demo', href: '/demo' },
     secondaryAction: { label: 'See how it works', href: '#how-it-works', variant: 'outline' },
     trustSignals: [
