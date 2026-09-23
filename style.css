@@ -77,6 +77,8 @@
 .product-dots button { width: 6px; height: 6px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.65); box-shadow: 0 1px 4px rgba(30,20,35,.2); cursor: pointer; transition: width .2s, background .2s; }
 .product-dots button.active { width: 18px; border-radius: 10px; background: white; }
 .product-link { cursor: pointer; background: transparent; }
+.product-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+.product-actions .product-link { flex: 0 0 auto; }
 .floating-qr { position: fixed; right: 22px; bottom: 22px; z-index: 25; display: inline-flex; align-items: center; gap: 8px; padding: 12px 14px; border: 1px solid #d9cfe1; border-radius: 999px; background: #fffdfd; color: var(--plum); box-shadow: 0 10px 28px rgba(70,53,82,.16); cursor: pointer; font-size: 11px; font-weight: 700; transition: transform .2s, box-shadow .2s; }
 .floating-qr:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(70,53,82,.24); }
 .chat-grid { display: flex; gap: 16px; overflow-x: auto; padding: 8px 2px 22px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: #cfc2db transparent; }
@@ -104,3 +106,30 @@
 .copy-product:hover { background: #dfd1eb; border-color: #9d82b1; }
 .order-message { width: 100%; margin-top: 13px; }
 @media (max-width: 720px) { .price-options button b { font-size: 13px; } .order-card { padding: 26px 20px; } .chat-card { flex-basis: min(270px, 76vw); max-width: min(270px, 76vw); } .chat-card > img { height: 210px; } }
+
+/* Review lightbox and compact mobile layouts */
+.chat-card { padding: 12px; color: var(--ink); text-align: left; cursor: zoom-in; }
+.chat-card .chat-top > span:nth-child(2) { display: grid; gap: 2px; }
+.chat-card .chat-top small { display: block; }
+.review-quote { display: inline-block; max-width: 100%; margin-top: 10px; padding: 8px 10px; border-radius: 12px 12px 2px 12px; background: #eee7f4; color: #55475f; font: 11px/1.4 'DM Sans', sans-serif; }
+.review-lightbox { width: min(92vw, 520px); max-height: 90vh; position: relative; padding: 12px; background: #fff; box-shadow: 0 22px 70px rgba(29,20,35,.3); }
+.review-lightbox img { width: 100%; max-height: calc(90vh - 24px); display: block; object-fit: contain; }
+@media (max-width: 720px) { .product-card { width: 100%; }.product-image { height: 380px; }.product-actions { gap: 10px; }.product-actions .product-link { font-size: 11px; }.detail-prices { gap: 7px; }.detail-prices button { min-height: 82px; padding: 10px; }.order-links { gap: 6px; }.order-links a { padding: 9px 7px; font-size: 10px; } }
+
+/* Product detail route */
+.product-detail { min-height: calc(100vh - 80px); padding: 52px 0 100px; background: #fcf9fd; }
+.detail-back { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; color: var(--plum); font-size: 12px; font-weight: 700; }
+.detail-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 72px; align-items: center; }
+.detail-image { min-height: 610px; position: relative; overflow: hidden; background: #e9e0e8; }
+.detail-image > img { width: 100%; height: 610px; display: block; object-fit: cover; mix-blend-mode: multiply; }
+.detail-dots { position: absolute; right: 0; bottom: 18px; left: 0; display: flex; justify-content: center; gap: 7px; }
+.detail-dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 999px; background: rgba(255,255,255,.72); cursor: pointer; transition: width .2s; }
+.detail-dots button.active { width: 22px; background: white; }
+.detail-copy h1 { margin: 20px 0 12px; font: 52px/1 'Playfair Display', serif; letter-spacing: -.05em; }
+.detail-copy > p { margin: 0 0 28px; color: var(--muted); font-size: 14px; }
+.detail-prices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 26px; }
+.detail-prices button { min-height: 90px; display: grid; align-content: center; gap: 6px; padding: 14px; border: 1px solid #ddd3e4; background: white; text-align: left; cursor: pointer; }
+.detail-prices button.selected, .detail-prices button:hover { border-color: #8c6aa5; background: #f3edf7; }
+.detail-prices small { color: var(--muted); font-size: 10px; }.detail-prices b { font-size: 14px; letter-spacing: .1em; }.detail-prices strong { color: var(--plum); font-size: 12px; }
+.detail-empty { min-height: 40vh; padding-top: 90px; }
+@media (max-width: 720px) { .product-detail { padding: 28px 0 70px; }.detail-grid { grid-template-columns: 1fr; gap: 30px; }.detail-image, .detail-image > img { min-height: 440px; height: 440px; }.detail-copy h1 { font-size: 43px; } }
