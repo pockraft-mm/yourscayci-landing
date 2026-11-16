@@ -37,9 +37,10 @@ export const products: Product[] = [
     description: '',
     images: ['magicblack-1.jpg', 'product-stocking-magicblack-2.jpg', 'product-stocking-magicblack-3.png', 'product-stocking-magicblack-4.png'],
     prices: [
-      { group: 'Free Size', label: 'Free Size', fit: '80–135 lb', price: '23,500 Ks' },
+      { group: 'Free Size', label: 'Free Size', fit: '80–135 lb', price: '25,500 Ks' },
       { group: 'Plus Size', label: 'Size L', fit: '140–165 lb', price: '30,000 Ks' },
       { group: 'Plus Size', label: 'Size XL', fit: '165–200 lb', price: '30,000 Ks' },
+      { group: 'Plus Size', label: 'Size 2XL', fit: '200–230 lb', price: '35,500 Ks' },
     ],
   },
   {
