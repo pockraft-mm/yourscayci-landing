@@ -14,8 +14,8 @@ export const products: Product[] = [
     description: '',
     images: ['skincolor-1.png', 'product-stocking-skincolor-2.png', 'product-stocking-skincolor-3.png'],
     prices: [
-      { group: 'Free Size', label: 'BKK Fabric', fit: '80–135 lb', price: '23,500 Ks' },
-      { group: 'Free Size', label: 'Silicon Fabric', fit: '80–135 lb', price: '25,000 Ks' },
+      { group: 'Free Size', label: 'BKK Fabric', fit: '80–135 lb', price: '25,500 Ks' },
+      { group: 'Free Size', label: 'Silicon Fabric', fit: '80–135 lb', price: '25,500 Ks' },
       { group: 'Plus Size', label: 'Size L', fit: '140–165 lb', price: '27,000 Ks' },
       { group: 'Plus Size', label: 'Size XL', fit: '165–200 lb', price: '27,000 Ks' },
     ],
