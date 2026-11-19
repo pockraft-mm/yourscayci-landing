@@ -49,7 +49,7 @@ export const products: Product[] = [
     description: '',
     images: ['winter stocking brown/Pasted image.png', 'winter stocking brown/Pasted image (2).png'],
     prices: [
-      { group: 'Free Size', label: 'Winter Stocking', fit: '80–135 lb', price: '38,500 Ks' },
+      { group: 'Free Size', label: 'Winter Stocking', fit: '80–135 lb', price: '39,500 Ks' },
     ],
   },
   {
@@ -58,7 +58,7 @@ export const products: Product[] = [
     description: '',
     images: ['Winter Stocking magic black/Pasted image.png', 'Winter Stocking magic black/Pasted image (2).png', 'Winter Stocking magic black/Pasted image (3).png', 'Winter Stocking magic black/Pasted image (4).png'],
     prices: [
-      { group: 'Free Size', label: 'Winter Stocking', fit: '80–135 lb', price: '38,500 Ks' },
+      { group: 'Free Size', label: 'Winter Stocking', fit: '80–135 lb', price: '39,500 Ks' },
     ],
   },
   {
@@ -67,7 +67,7 @@ export const products: Product[] = [
     description: '',
     images: ['Winter Stocking skin color/Pasted image.png', 'Winter Stocking skin color/Pasted image (2).png', 'Winter Stocking skin color/Pasted image (3).png', 'Winter Stocking skin color/Pasted image (4).png', 'Winter Stocking skin color/Pasted image (5).png', 'Winter Stocking skin color/Pasted image (6).png'],
     prices: [
-      { group: 'Free Size', label: 'Winter Stocking', fit: '80–135 lb', price: '38,500 Ks' },
+      { group: 'Free Size', label: 'Winter Stocking', fit: '80–135 lb', price: '39,500 Ks' },
     ],
   },
 ];
